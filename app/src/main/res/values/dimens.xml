@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tamaños de EditText -->
+    <dimen name="edittext_largo1">200dp</dimen>
+    <dimen name="edittext_largo2">150dp</dimen>
+    <dimen name="edittext_alto1">48dp</dimen>
+    <dimen name="edittext_textsize1">18sp</dimen>
+    <dimen name="edittext_padding1">5dp</dimen>
+    <dimen name="edittext_mgstart1">10dp</dimen>
+
+    <dimen name="btnSeleccionarCampus1">12sp</dimen>
+    <dimen name="btnBottom">16sp</dimen>
+</resources>

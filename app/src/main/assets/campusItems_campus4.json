@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "nombreSeccion": "Revisión de Conectividad",
+      "itemsSeccion": [
+        {
+          "nombre": "Red cableada Alumnos",
+          "descripcion": "Edificio C, Piso 2",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Red cableada Administrativos",
+          "descripcion": "Piso 1 y 3, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Wi-Fi",
+          "descripcion": "Todo el campus",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Sistemas",
+      "itemsSeccion": [
+        {
+          "nombre": "Servidor Alumnos",
+          "descripcion": "Edificio B, Piso 3",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor Docentes",
+          "descripcion": "Edificio A, Piso 2",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Seguridad",
+      "itemsSeccion": [
+        {
+          "nombre": "Cámaras CCTV",
+          "descripcion": "Entrada Principal",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Control de Acceso",
+          "descripcion": "Puerta Principal y Estacionamientos",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    }
+  ]
+}

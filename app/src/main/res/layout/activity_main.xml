@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:padding="20dp">
+
+            <!-- Fondo de logo -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/v_fondo_seccion"/>
+
+            <!-- Imagen logo -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/unablogo"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:contentDescription="@string/app_name"/>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp">
+
+            <!-- Fondo de login -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/v_fondo_seccion"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tvLoginText"
+                    android:textColor="#1B1B1B"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="80dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvLabelUsername"
+                        android:textColor="@color/edittext_text_azul"
+                        android:layout_marginStart="30dp"
+                        android:textSize="25sp"
+                        android:layout_gravity="center"
+                        android:shadowColor="@color/textview_text_sombra1"
+                        android:shadowRadius="5"
+                        android:shadowDx="1"
+                        android:shadowDy="1"/>
+
+                    <EditText
+                        android:id="@+id/et_loginUsername"
+                        android:layout_width="@dimen/edittext_largo1"
+                        android:layout_height="@dimen/edittext_alto1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/edittext1"
+                        android:hint="@string/edittext_userHint"
+                        android:textColor="@color/edittext_text_color1"
+                        android:textColorHint="@color/edittext_hint_color1"
+                        android:textSize="@dimen/edittext_textsize1"
+                        android:layout_marginStart="@dimen/edittext_mgstart1"
+                        android:padding="@dimen/edittext_padding1"
+                        android:autofillHints="username"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvLabelPassword"
+                        android:textColor="@color/edittext_text_azul"
+                        android:layout_marginStart="30dp"
+                        android:textSize="25sp"
+                        android:layout_gravity="center"
+                        android:shadowColor="@color/textview_text_sombra1"
+                        android:shadowRadius="5"
+                        android:shadowDx="1"
+                        android:shadowDy="1"/>
+
+                    <EditText
+                        android:id="@+id/et_loginPassword"
+                        android:layout_width="@dimen/edittext_largo2"
+                        android:layout_height="@dimen/edittext_alto1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/edittext1"
+                        android:hint="@string/edittext_pwHint"
+                        android:textColor="@color/edittext_text_color1"
+                        android:textColorHint="@color/edittext_hint_color1"
+                        android:textSize="@dimen/edittext_textsize1"
+                        android:layout_marginStart="@dimen/edittext_mgstart1"
+                        android:padding="@dimen/edittext_padding1"
+                        android:inputType="textPassword"
+                        android:autofillHints="password"/>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_loginButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:padding="20sp"
+                    android:text="@string/btnIniciarSesion"
+                    android:textSize="40sp"
+                    android:backgroundTint="#686868"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

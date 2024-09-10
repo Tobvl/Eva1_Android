@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Eva1</string>
+    <string name="tvAppTitle">Checklist de Infraestructura Tecnológica</string>
+    <string name="tvAppVersion">v1.0.3</string>
+
+    <string name="tvLoginText">Ingreso al Sistema</string>
+    <string name="tvSelectCampus">Selecciona un Campus</string>
+
+    <string name="tvSelectCampus1">Campus Antonio Varas</string>
+    <string name="tvSelectCampus2">Campus Los Leones</string>
+    <string name="tvSelectCampus3">Campus Bellavista</string>
+    <string name="tvSelectCampus4">Campus Creativo</string>
+    <string name="tvSelectCampus5">Campus Casona</string>
+
+    <string name="tvBienvenidoUsuario">Bienvenido!\n</string>
+
+    <string name="tvLabelUsername">Usuario:</string>
+    <string name="tvLabelPassword">Contraseña:</string>
+    <string name="btnIniciarSesion">Iniciar sesión</string>
+    <string name="btnCerrarSesion">Cerrar sesión</string>
+    <string name="btnIniciarChecklist">Iniciar Checklist</string>
+    <string name="edittext_userHint">Usuario123</string>
+    <string name="edittext_pwHint">********</string>
+    <string name="btnSeleccionarCampus">Seleccionar</string>
+    <string name="btnVolverAtras">Volver</string>
+    <string name="btnRevisarChecklist">Enviar</string>
+    <string name="btnConfirmarEnvioChecklist">Confirmar</string>
+    <string name="btnCancelar">Cancelar</string>
+</resources>

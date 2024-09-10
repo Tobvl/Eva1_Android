@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "nombreSeccion": "Revisión de Conectividad",
+      "itemsSeccion": [
+        {
+          "nombre": "Red Cableada Administrativos",
+          "descripcion": "Oficinas Piso 1, Edificio Principal",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Red Wi-Fi Alumnos",
+          "descripcion": "Áreas comunes y Biblioteca",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Red Cableada Alumnos",
+          "descripcion": "Laboratorios de Computación, Edificio B",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Puntos de Acceso Wi-Fi",
+          "descripcion": "Planta Baja y Piso 1, Edificio C",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Servidores",
+      "itemsSeccion": [
+        {
+          "nombre": "Servidor Principal de Aplicaciones",
+          "descripcion": "Sala de Servidores, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor de Backup",
+          "descripcion": "Sala de Servidores, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor de Correo Electrónico",
+          "descripcion": "Planta Baja, Edificio Principal",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor de Archivos",
+          "descripcion": "Edificio Principal, Piso 2",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Salas de Clases",
+      "itemsSeccion": [
+        {
+          "nombre": "Proyector Aula 101",
+          "descripcion": "Edificio Principal, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Sistema de Audio Aula 101",
+          "descripcion": "Edificio Principal, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Proyector Aula 203",
+          "descripcion": "Edificio Principal, Piso 2",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Proyector Aula 304",
+          "descripcion": "Edificio B, Piso 3",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Sistema de Videoconferencia Aula 201",
+          "descripcion": "Edificio Principal, Piso 2",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Equipos de Laboratorios",
+      "itemsSeccion": [
+        {
+          "nombre": "Computadoras Laboratorio 1",
+          "descripcion": "Edificio B, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Computadoras Laboratorio 2",
+          "descripcion": "Edificio B, Piso 1",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Impresoras Laboratorio 1",
+          "descripcion": "Edificio B, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Salas de Reuniones",
+      "itemsSeccion": [
+        {
+          "nombre": "Sistema de Proyección Sala de Reuniones 1",
+          "descripcion": "Edificio Principal, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Sistema de Videoconferencia Sala de Reuniones 2",
+          "descripcion": "Edificio A, Piso 2",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Equipo de Audio Sala de Reuniones 3",
+          "descripcion": "Edificio A, Piso 1",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Seguridad",
+      "itemsSeccion": [
+        {
+          "nombre": "CCTV Entrada Principal",
+          "descripcion": "Edificio Principal, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cámaras de Vigilancia Pasillo A",
+          "descripcion": "Edificio B, Piso 1",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Cámaras de Vigilancia Pasillo B",
+          "descripcion": "Edificio A, Piso 2",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Energía",
+      "itemsSeccion": [
+        {
+          "nombre": "Generador Principal",
+          "descripcion": "Sala de Energía, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "UPS Principal",
+          "descripcion": "Sala de Servidores, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "UPS Secundario",
+          "descripcion": "Edificio B, Piso 2",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Telefonía",
+      "itemsSeccion": [
+        {
+          "nombre": "Central Telefónica",
+          "descripcion": "Edificio Principal, Planta Baja",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Teléfonos Administrativos",
+          "descripcion": "Oficinas Administrativas, Piso 1, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Teléfonos Alumnos",
+          "descripcion": "Sala de Estudiantes, Piso 1, Edificio B",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Sistemas de Almacenamiento",
+      "itemsSeccion": [
+        {
+          "nombre": "Servidor NAS Principal",
+          "descripcion": "Sala de Servidores, Edificio A",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor de Backup",
+          "descripcion": "Edificio A, Piso 1",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    }
+  ]
+}

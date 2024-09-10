@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "nombreSeccion": "Revisión de Sistemas",
+      "itemsSeccion": [
+        {
+          "nombre": "Servidor de Aplicaciones",
+          "descripcion": "Sala de Servidores, Edificio B",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor Base de Datos",
+          "descripcion": "Sala de Servidores, Edificio B",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Equipos de Usuarios",
+      "itemsSeccion": [
+        {
+          "nombre": "Computadores Alumnos",
+          "descripcion": "Laboratorios 1, 2 y 3",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Computadores Administrativos",
+          "descripcion": "Oficinas Administrativas",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Conectividad",
+      "itemsSeccion": [
+        {
+          "nombre": "Red Wi-Fi Alumnos",
+          "descripcion": "Edificios A y B",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Red Cableada Administrativos",
+          "descripcion": "Piso 3, Edificio A",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    }
+  ]
+}

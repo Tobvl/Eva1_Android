@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CampusActivity5"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="center"
+          android:layout_marginStart="30dp"
+          android:layout_marginEnd="30dp"
+          android:src="@drawable/unablogo" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="115dp"
+          android:orientation="vertical"
+          android:layout_marginTop="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvAppTitle"
+            android:textSize="17.5sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvAppVersion" />
+        <TextView
+            android:id="@+id/tvBienvenidoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvSelectCampus5"
+            android:textSize="21sp"
+            android:layout_marginTop="15dp"/>
+
+
+      </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#c0c0c0"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <LinearLayout
+          android:id="@+id/linearLayoutItemContainer"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+          <Button
+              android:id="@+id/btnVolver"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/btnVolverAtras"
+              android:textSize="@dimen/btnBottom"
+              android:backgroundTint="@color/btn_cerrar_rojo"/>
+
+          <Button
+              android:id="@+id/btnEnviarChecklist"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/btnRevisarChecklist"
+              android:textSize="@dimen/btnBottom"
+              android:layout_marginStart="60dp"
+              android:backgroundTint="@color/btn_iniciar_verde"/>
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+    </ScrollView>
+
+
+  </LinearLayout>
+
+</LinearLayout>

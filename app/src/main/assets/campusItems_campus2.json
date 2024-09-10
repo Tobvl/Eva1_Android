@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "nombreSeccion": "Revisión de Conectividad",
+      "itemsSeccion": [
+        {
+          "nombre": "Red cableada Administrativos",
+          "descripcion": "Oficina de Dirección",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Wi-Fi",
+          "descripcion": "Área de Alumnos y Biblioteca",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Energía",
+      "itemsSeccion": [
+        {
+          "nombre": "Generador de respaldo",
+          "descripcion": "Sala de Servidores",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "UPS Principal",
+          "descripcion": "Edificio Principal",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },
+    {
+      "nombreSeccion": "Revisión de Seguridad",
+      "itemsSeccion": [
+        {
+          "nombre": "CCTV",
+          "descripcion": "Sala de Monitoreo",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Control de Acceso",
+          "descripcion": "Entrada Principal y Estacionamiento",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    }
+  ]
+}

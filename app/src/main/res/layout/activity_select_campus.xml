@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectCampusActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/unablogo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAppTitle"
+                    android:textSize="17.5sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAppVersion" />
+                <TextView
+                    android:id="@+id/tvBienvenidoUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvBienvenidoUsuario"
+                    android:textSize="21sp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayoutCampus1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#c0c0c0"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tvSelectCampus"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayoutCampus1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCampus1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayoutCampus2">
+
+                <Button
+                    android:id="@+id/btnSelectCampus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/btnSeleccionarCampus"
+                    android:textSize="@dimen/btnSeleccionarCampus1"
+                    android:backgroundTint="@color/btn_select_azul"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/tvSelectCampus1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCampus2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/linearLayoutCampus1"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayoutCampus3">
+
+                <Button
+                    android:id="@+id/btnSelectCampus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/btnSeleccionarCampus"
+                    android:textSize="@dimen/btnSeleccionarCampus1"
+                    android:backgroundTint="@color/btn_select_azul"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/tvSelectCampus2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCampus3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/linearLayoutCampus2"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayoutCampus4">
+
+                <Button
+                    android:id="@+id/btnSelectCampus3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/btnSeleccionarCampus"
+                    android:textSize="@dimen/btnSeleccionarCampus1"
+                    android:backgroundTint="@color/btn_select_azul"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/tvSelectCampus3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCampus4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/linearLayoutCampus3"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayoutCampus5">
+
+                <Button
+                    android:id="@+id/btnSelectCampus4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/btnSeleccionarCampus"
+                    android:textSize="@dimen/btnSeleccionarCampus1"
+                    android:backgroundTint="@color/btn_select_azul"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/tvSelectCampus4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCampus5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/linearLayoutCampus4"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayoutBottom">
+
+                <Button
+                    android:id="@+id/btnSelectCampus5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/btnSeleccionarCampus"
+                    android:textSize="@dimen/btnSeleccionarCampus1"
+                    android:backgroundTint="@color/btn_select_azul"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/tvSelectCampus5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCampus5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnCerrarSesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnCerrarSesion"
+                    android:textSize="@dimen/btnBottom"
+                    android:backgroundTint="@color/btn_cerrar_rojo"/>
+
+                <Button
+                    android:id="@+id/btnIniciarChecklist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnIniciarChecklist"
+                    android:textSize="@dimen/btnBottom"
+                    android:layout_marginStart="20dp"
+                    android:backgroundTint="@color/btn_iniciar_verde"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

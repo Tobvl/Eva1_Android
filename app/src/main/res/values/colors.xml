@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="v_fondo_seccion">#97FFFFFF</color>
+
+    <color name="edittext_background_color1">#40666464</color>
+    <color name="linearlayout_selected_color1">#BDDBFF</color>
+    <color name="edittext_text_color1">#000000</color>
+    <color name="edittext_hint_color1">#4DFFFFFF</color>
+
+    <color name="edittext_text_azul">#2B68E2</color>
+    <color name="btn_select_azul">#426CD5</color>
+    <color name="btn_iniciar_verde">#58D542</color>
+    <color name="btn_cerrar_rojo">#D54242</color>
+
+    <color name="textview_text_sombra1">#66000000</color>
+</resources>

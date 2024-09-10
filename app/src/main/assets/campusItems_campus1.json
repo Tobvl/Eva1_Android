@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "nombreSeccion": "Revisión de Conectividad",
+      "itemsSeccion": [
+        {
+          "nombre": "Red cableada Administrativos",
+          "descripcion": "Sala de Profesores y TI",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Red cableada Alumnos",
+          "descripcion": "Todo el campus",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Wi-Fi",
+          "descripcion": "Todo el campus",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Telefonía",
+          "descripcion": "Oficina TI",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    },{
+      "nombreSeccion": "Revisión de Sistemas",
+      "itemsSeccion": [
+        {
+          "nombre": "Servidor impresión Alumnos",
+          "descripcion": "Todo el campus",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor impresión Administrativos",
+          "descripcion": "Dirección de Campus",
+          "estado": "",
+          "detalle": ""
+        },
+        {
+          "nombre": "Servidor impresión Docentes",
+          "descripcion": "Sala de Profesores",
+          "estado": "",
+          "detalle": ""
+        }
+      ]
+    }
+  ]
+}
+
+
