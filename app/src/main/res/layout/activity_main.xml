@@ -153,6 +153,17 @@
                     android:text="@string/btnIniciarSesion"
                     android:textSize="40sp"
                     android:backgroundTint="#686868"/>
+
+                <Button
+                    android:id="@+id/btn_registerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:padding="20sp"
+                    android:text="@string/btnRegistrar"
+                    android:textSize="40sp"
+                    android:backgroundTint="#686868"/>
             </LinearLayout>
 
         </FrameLayout>

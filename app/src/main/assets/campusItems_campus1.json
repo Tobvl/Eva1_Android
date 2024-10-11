@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "idMovie": 1,
+      blabla
+    },
+    {
+      "idMovie": 1,
+      blabla},
+    {
+      "idMovie": 1,
+      blabla}
+  ]
+}
+
+{
+  "items": [
+    {
       "nombreSeccion": "Revisión de Conectividad",
       "itemsSeccion": [
         {

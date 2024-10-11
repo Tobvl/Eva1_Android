@@ -17,6 +17,7 @@
     <string name="tvLabelUsername">Usuario:</string>
     <string name="tvLabelPassword">Contraseña:</string>
     <string name="btnIniciarSesion">Iniciar sesión</string>
+    <string name="btnRegistrar">Registrarme</string>
     <string name="btnCerrarSesion">Cerrar sesión</string>
     <string name="btnIniciarChecklist">Iniciar Checklist</string>
     <string name="edittext_userHint">Usuario123</string>

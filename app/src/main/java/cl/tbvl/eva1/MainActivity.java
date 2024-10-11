@@ -19,8 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText tvUsernameText, tvPasswordText; // id: et_loginUsername | id : et_loginPassword
-    Button btnLoginButton; // id: btn_loginButton
+    EditText tvUsernameText, tvPasswordText; // id: et_loginUsername | id: et_loginPassword
+    Button btnLoginButton, btnRegisterButton; // id: btn_loginButton | id: btn_registerButton
 
     private void cambiarFondoEditText(EditText et){
         et.setBackgroundResource(R.drawable.edittext1_borderojo);
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        btnRegisterButton = findViewById(R.id.btn_registerButton);
         btnLoginButton = findViewById(R.id.btn_loginButton);
         tvUsernameText = findViewById(R.id.et_loginUsername);
         tvPasswordText = findViewById(R.id.et_loginPassword);
@@ -45,24 +46,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 if (tvUsernameText.getText().toString().trim().isEmpty() ||
                     tvPasswordText.getText().toString().trim().isEmpty()) {
-                    if (mToast != null){
+                    if (mToast != null) {
                         mToast.cancel();
                     }
                     mToast = Toast.makeText(getApplicationContext(),
                             "Debes ingresar todos los datos!",
                             Toast.LENGTH_LONG);
                     mToast.show();
-
-                    if (tvUsernameText.getText().toString().trim().isEmpty()){
-                        cambiarFondoEditText(tvUsernameText);
-                    }
-                    if (tvPasswordText.getText().toString().trim().isEmpty()){
-                        cambiarFondoEditText(tvPasswordText);
-                    }
-
-
                 } else {
-                    // Si el usuario y clave no son test
+                    // Verificar usuario
                     if (!tvUsernameText.getText().toString().trim().equals("test") ||
                             !tvPasswordText.getText().toString().trim().equals("test")){
                         if (mToast != null){
@@ -88,6 +80,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+        });
+
+        btnRegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                // Cambiar de activity
+                Intent i = new Intent(
+                        MainActivity.this,
+                        RegisterActivity.class);
+                startActivity(i);
+                finish();
+            }
         });
 
         Log.i("hola", "mensaje");
