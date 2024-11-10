@@ -17,6 +17,8 @@ public class EnviarChecklistActivity extends AppCompatActivity {
     Button btnCancelar, btnConfirmarEnvioChecklist;
     private Toast mToast;
 
+    String usernameText, checklistData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,12 @@ public class EnviarChecklistActivity extends AppCompatActivity {
 
         btnCancelar = findViewById(R.id.btnCancelar);
         btnConfirmarEnvioChecklist = findViewById(R.id.btnConfirmarEnvioChecklist);
+
+        Bundle b = getIntent().getExtras();
+        // Si el assert es falso, ocurre un error
+        assert b != null;
+        usernameText = b.getString("loginUsername");
+        checklistData = b.getString("data");
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,10 +53,18 @@ public class EnviarChecklistActivity extends AppCompatActivity {
                 mToast.makeText(getApplicationContext(),
                         "Checklist enviado exitosamente!",
                         Toast.LENGTH_LONG).show();
-                mToast.cancel();
+
+                AdminSQLiteOpenHelper.sendChecklist(
+                        getApplicationContext(),
+                        usernameText,
+                        checklistData
+                );
+
                 Intent i = new Intent(
                         EnviarChecklistActivity.this,
                         SelectCampusActivity.class);
+                i.putExtra("loginUsername",
+                        usernameText);
                 startActivity(i);
                 finish();
             }

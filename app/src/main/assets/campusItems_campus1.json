@@ -1,42 +1,31 @@
 {
   "items": [
     {
-      "idMovie": 1,
-      blabla
-    },
-    {
-      "idMovie": 1,
-      blabla},
-    {
-      "idMovie": 1,
-      blabla}
-  ]
-}
-
-{
-  "items": [
-    {
       "nombreSeccion": "Revisión de Conectividad",
       "itemsSeccion": [
         {
+          "id": 1001,
           "nombre": "Red cableada Administrativos",
           "descripcion": "Sala de Profesores y TI",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 1002,
           "nombre": "Red cableada Alumnos",
           "descripcion": "Todo el campus",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 1003,
           "nombre": "Wi-Fi",
           "descripcion": "Todo el campus",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 1004,
           "nombre": "Telefonía",
           "descripcion": "Oficina TI",
           "estado": "",
@@ -47,18 +36,21 @@
       "nombreSeccion": "Revisión de Sistemas",
       "itemsSeccion": [
         {
+          "id": 1005,
           "nombre": "Servidor impresión Alumnos",
           "descripcion": "Todo el campus",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 1006,
           "nombre": "Servidor impresión Administrativos",
           "descripcion": "Dirección de Campus",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 1007,
           "nombre": "Servidor impresión Docentes",
           "descripcion": "Sala de Profesores",
           "estado": "",

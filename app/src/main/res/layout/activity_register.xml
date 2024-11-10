@@ -38,6 +38,17 @@
         android:inputType="textPassword"
         android:layout_gravity="center"
         />
+    <EditText
+        android:id="@+id/et_RegisterRut"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Rut sin puntos ni guión (K = 0)"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:maxLength="9"
+        android:layout_gravity="center"
+        />
 
     <Button
         android:id="@+id/btn_Registrar"

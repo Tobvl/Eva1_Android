@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText tvRegUsernameText, tvRegPasswordText;
+    EditText tvRegUsernameText, tvRegPasswordText, tvRegRutText;
     Button btnRegistrarButton, btnVolverLoginButton;
 
     private Toast mToast;
@@ -30,13 +30,15 @@ public class RegisterActivity extends AppCompatActivity {
         btnVolverLoginButton = findViewById(R.id.btn_VolverLogin);
         tvRegUsernameText = findViewById(R.id.et_RegisterUsername);
         tvRegPasswordText = findViewById(R.id.et_RegisterPassword);
-
-
+        tvRegRutText = findViewById(R.id.et_RegisterRut);
+        //AdminSQLiteOpenHelper.clearDatabase(getApplicationContext());
         btnRegistrarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (tvRegPasswordText.getText().toString().trim().isEmpty() ||
-                        tvRegPasswordText.getText().toString().trim().isEmpty()) {
+                        tvRegPasswordText.getText().toString().trim().isEmpty() ||
+                        tvRegRutText.getText().toString().trim().isEmpty()) {
                     if (mToast != null) {
                         mToast.cancel();
                     }
@@ -44,17 +46,29 @@ public class RegisterActivity extends AppCompatActivity {
                             "Debes ingresar todos los datos!",
                             Toast.LENGTH_LONG);
                     mToast.show();
+                    return;
                 } else if (tvRegPasswordText.getText().toString().length() <= 4) {
                     if (mToast != null) {
                         mToast.cancel();
                     }
                     mToast = Toast.makeText(getApplicationContext(),
-                            "La contraseña debe contener más de 4 caracteres!",
+                            "La contraseña debe contener 5 o más caracteres!",
                             Toast.LENGTH_LONG);
                     mToast.show();
+                    return;
+                } else if (tvRegRutText.getText().toString().length() < 8) {
+                    if (mToast != null) {
+                        mToast.cancel();
+                    }
+                    mToast = Toast.makeText(getApplicationContext(),
+                            "El rut debe tener 8 o 9 dígitos!",
+                            Toast.LENGTH_LONG);
+                    mToast.show();
+                    return;
                 }
                 String usuario = tvRegUsernameText.getText().toString();
                 String password = tvRegPasswordText.getText().toString();
+                String rut = tvRegRutText.getText().toString();
 
                 boolean existeUser = AdminSQLiteOpenHelper.existeUsuario(getApplicationContext(), usuario);
 
@@ -62,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                     ContentValues registro = new ContentValues();
                     registro.put("username", usuario);
                     registro.put("password", password);
+                    registro.put("rut", rut);
                     AdminSQLiteOpenHelper.registrarUsuario(getApplicationContext(), registro);
 
                     if (mToast != null) {

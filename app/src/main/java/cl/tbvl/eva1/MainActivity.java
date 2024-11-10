@@ -1,6 +1,7 @@
 package cl.tbvl.eva1;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,10 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 et.setBackgroundResource(R.drawable.edittext1), 3000);
     }
 
+
     private Toast mToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //AdminSQLiteOpenHelper.clearDatabase(getApplicationContext(), "administracion");
+        AdminSQLiteOpenHelper.instantiate(getApplicationContext());
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -55,17 +59,38 @@ public class MainActivity extends AppCompatActivity {
                     mToast.show();
                 } else {
                     // Verificar usuario
-                    if (!tvUsernameText.getText().toString().trim().equals("test") ||
-                            !tvPasswordText.getText().toString().trim().equals("test")){
+                    String usuario = tvUsernameText.getText().toString().trim();
+                    String clave = tvPasswordText.getText().toString();
+
+                    boolean existeUser = AdminSQLiteOpenHelper.existeUsuario(getApplicationContext(), usuario);
+
+                    if (!existeUser){
                         if (mToast != null){
                             mToast.cancel();
                         }
                         mToast = Toast.makeText(getApplicationContext(),
-                                "Debes ingresar un usuario válido! (test test)",
+                                "Usuario no registrado!",
                                 Toast.LENGTH_LONG);
                         mToast.show();
                         return;
                     }
+
+                    boolean intentarLogin = AdminSQLiteOpenHelper.login(
+                            getApplicationContext(),
+                            usuario,
+                            clave);
+
+                    if (!intentarLogin) {
+                        if (mToast != null){
+                            mToast.cancel();
+                        }
+                        mToast = Toast.makeText(getApplicationContext(),
+                                "Contraseña incorrecta!",
+                                Toast.LENGTH_LONG);
+                        mToast.show();
+                        return;
+                    }
+
                     // Cambiar de activity
 
                     String passUsername = tvUsernameText.getText().toString();

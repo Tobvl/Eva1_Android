@@ -4,12 +4,14 @@
       "nombreSeccion": "Revisión de Conectividad",
       "itemsSeccion": [
         {
+          "id": 2001,
           "nombre": "Red cableada Administrativos",
           "descripcion": "Oficina de Dirección",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 2002,
           "nombre": "Wi-Fi",
           "descripcion": "Área de Alumnos y Biblioteca",
           "estado": "",
@@ -21,12 +23,14 @@
       "nombreSeccion": "Revisión de Energía",
       "itemsSeccion": [
         {
+          "id": 2003,
           "nombre": "Generador de respaldo",
           "descripcion": "Sala de Servidores",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 2004,
           "nombre": "UPS Principal",
           "descripcion": "Edificio Principal",
           "estado": "",
@@ -38,12 +42,14 @@
       "nombreSeccion": "Revisión de Seguridad",
       "itemsSeccion": [
         {
+          "id": 2005,
           "nombre": "CCTV",
           "descripcion": "Sala de Monitoreo",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 2006,
           "nombre": "Control de Acceso",
           "descripcion": "Entrada Principal y Estacionamiento",
           "estado": "",

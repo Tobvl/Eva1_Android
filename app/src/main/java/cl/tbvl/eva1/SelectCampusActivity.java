@@ -3,6 +3,7 @@ package cl.tbvl.eva1;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -51,6 +52,7 @@ public class SelectCampusActivity extends AppCompatActivity {
         animatorSet.start();
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,15 @@ public class SelectCampusActivity extends AppCompatActivity {
         Button btnSelectCampus5 = findViewById(R.id.btnSelectCampus5);
         Button btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         Button btnIniciarChecklist = findViewById(R.id.btnIniciarChecklist);
+
+        TextView tvBienvenidoUsuarioText = findViewById(R.id.tvBienvenidoUsuario);
+        Bundle b = getIntent().getExtras();
+        // Si el assert es falso, ocurre un error
+        assert b != null;
+        usernameText = b.getString("loginUsername");
+        tvBienvenidoUsuarioText.setText("Bienvenido! \n " + usernameText);
+
+
 
         View.OnClickListener listenerComun = new View.OnClickListener() {
             @Override
@@ -104,6 +115,8 @@ public class SelectCampusActivity extends AppCompatActivity {
                         Intent i = new Intent(
                                 SelectCampusActivity.this,
                                 selectedActivity);
+                        i.putExtra("loginUsername",
+                                usernameText);
                         startActivity(i);
                     }else {
                         moverBoton(btnSelectCampus1);
@@ -131,13 +144,6 @@ public class SelectCampusActivity extends AppCompatActivity {
         btnIniciarChecklist.setOnClickListener(listenerComun);
 
 
-
-        TextView tvBienvenidoUsuarioText = findViewById(R.id.tvBienvenidoUsuario);
-        Bundle b = getIntent().getExtras();
-        // Si el assert es falso, ocurre un error
-        assert b != null;
-        usernameText = b.getString("loginUsername");
-        tvBienvenidoUsuarioText.setText("Bienvenido! \n " + usernameText);
 
 
 

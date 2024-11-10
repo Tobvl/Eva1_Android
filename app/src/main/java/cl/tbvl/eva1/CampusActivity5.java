@@ -1,5 +1,6 @@
 package cl.tbvl.eva1;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -26,11 +27,19 @@ import java.io.InputStream;
 public class CampusActivity5 extends AppCompatActivity {
 
     private Toast mToast;
+
+    String usernameText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_campus5);
+
+        Bundle b = getIntent().getExtras();
+        // Si el assert es falso, ocurre un error
+        assert b != null;
+        usernameText = b.getString("loginUsername");
 
         Button btnVolverAtras, btnEnviarChecklist;
 
@@ -50,10 +59,74 @@ public class CampusActivity5 extends AppCompatActivity {
             public void onClick(View view) {
                 if (mToast != null){ mToast.cancel();}
 
-                Intent i = new Intent(
-                        CampusActivity5.this,
-                        EnviarChecklistActivity.class);
-                startActivity(i);
+                LinearLayout contenedorItems = findViewById(R.id.linearLayoutItemContainer);
+                String archivoCampusItems = "campusItems_campus5.json";
+                String archivoJSON = cargarJSON(archivoCampusItems);
+
+                try {
+                    JSONObject objetoJSON = new JSONObject(archivoJSON);
+                    JSONArray arraySecciones = objetoJSON.getJSONArray("items");
+
+                    // Iterar el array de secciones
+                    for (int i=0; i<arraySecciones.length(); i++){
+                        JSONObject seccion = arraySecciones.getJSONObject(i); // saco el item de la seccion
+                        String nombreSeccion = seccion.getString("nombreSeccion");
+
+                        // agarro los items de la sección como array
+                        JSONArray itemsSeccion = seccion.getJSONArray("itemsSeccion");
+
+                        // iterar los items de cada sección
+                        for (int j=0; j<itemsSeccion.length(); j++){
+                            JSONObject itemSeccion = itemsSeccion.getJSONObject(j);
+
+                            // obtengo el id
+                            int id = itemSeccion.getInt("id");
+
+                            // obtengo el valor de su estado
+                            String idEstado = id +"01";
+                            int idEstadoInt = Integer.parseInt(idEstado);
+                            @SuppressLint("ResourceType") RadioGroup radioGroup = findViewById(idEstadoInt);
+                            int radioGroupSelection =  radioGroup.getCheckedRadioButtonId();
+
+                            // obtengo texto del detalle
+                            String idDetalle = id +"02";
+                            int idDetalleInt = Integer.parseInt(idDetalle);
+                            @SuppressLint("ResourceType") EditText detalleInput = findViewById(idDetalleInt);
+                            String detalleInputText =  detalleInput.getText().toString();
+
+                            System.out.println("detalleInputText = " + detalleInputText);
+                            System.out.println("radioGroupSelection = " + radioGroupSelection);
+
+                            String estado = Integer.toString(radioGroupSelection);
+                            String detalle = detalleInputText;
+
+                            if (estado.equals("-1")){
+                                itemSeccion.put("estado", "N/A");
+                            }
+                            if (estado.endsWith("01")){
+                                itemSeccion.put("estado", "OK");
+                            }else {
+                                itemSeccion.put("estado", "NOK");
+                            }
+                            itemSeccion.put("detalle", detalle);
+
+
+                        }
+                    }
+                    String jsonActualizado = objetoJSON.toString(2);
+                    System.out.println(jsonActualizado);
+
+                    Intent i = new Intent(
+                            CampusActivity5.this,
+                            EnviarChecklistActivity.class);
+                    i.putExtra("loginUsername",
+                            usernameText);
+                    i.putExtra("data", jsonActualizado);
+                    startActivity(i);
+
+                } catch (Exception ex){
+                    ex.printStackTrace();
+                }
             }
         });
 
@@ -81,8 +154,9 @@ public class CampusActivity5 extends AppCompatActivity {
                     JSONObject itemSeccion = itemsSeccion.getJSONObject(j);
                     String nombreItem = itemSeccion.getString("nombre");
                     String descripcionItem = itemSeccion.getString("descripcion");
+                    Integer idItem = itemSeccion.getInt("id");
 
-                    agregarItemSeccion(contenedorItems, nombreItem, descripcionItem);
+                    agregarItemSeccion(contenedorItems, nombreItem, descripcionItem, idItem);
 
                 }
             }
@@ -110,7 +184,19 @@ public class CampusActivity5 extends AppCompatActivity {
     }
 
     // agregar items a sección
-    private void agregarItemSeccion(LinearLayout contenedorPadre, String nombre, String descripcion){
+    @SuppressLint("ResourceType")
+    private void agregarItemSeccion(LinearLayout contenedorPadre, String nombre, String descripcion, Integer id){
+
+        // generar id para radiogroup
+        String genIdRG = id.toString();
+        genIdRG = genIdRG + "01";
+        int nuevoIdRG = Integer.parseInt(genIdRG);
+
+        // generar id para edittext
+        String genIdET = id.toString();
+        genIdET = genIdET + "02";
+        int nuevoIdET = Integer.parseInt(genIdET);
+
         // Crear TextView para el nombre
         TextView itemTitle = new TextView(this);
         itemTitle.setText(nombre);
@@ -126,14 +212,24 @@ public class CampusActivity5 extends AppCompatActivity {
 
         // Crear RadioGroup para OK/NO OK
         RadioGroup radioGroup = new RadioGroup(this);
+        radioGroup.setId(nuevoIdRG);
         radioGroup.setOrientation(RadioGroup.HORIZONTAL);
 
         RadioButton radioOk = new RadioButton(this);
+        // generar id RaidoOk
+        String genIdRGOk = Integer.toString(nuevoIdRG);
+        genIdRGOk = genIdRGOk + "01";
+        int nuevoIdRGOk = Integer.parseInt(genIdRGOk);
         radioOk.setText("OK");
+        radioOk.setId(nuevoIdRGOk);
         radioGroup.addView(radioOk);
 
         RadioButton radioNoOk = new RadioButton(this);
+        String genIdRGNOk = Integer.toString(nuevoIdRG);
+        genIdRGNOk = genIdRGNOk + "02";
+        int nuevoIdRGNOk = Integer.parseInt(genIdRGNOk);
         radioNoOk.setText("NO OK");
+        radioNoOk.setId(nuevoIdRGNOk);
         radioGroup.addView(radioNoOk);
 
         contenedorPadre.addView(radioGroup);
@@ -141,6 +237,7 @@ public class CampusActivity5 extends AppCompatActivity {
         // Crear EditText para el detalle opcional
         EditText detalleOpcional = new EditText(this);
         detalleOpcional.setHint("Detalle opcional");
+        detalleOpcional.setId(nuevoIdET);
         contenedorPadre.addView(detalleOpcional);
     }
 

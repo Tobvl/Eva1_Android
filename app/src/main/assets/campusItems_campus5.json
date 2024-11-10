@@ -4,24 +4,28 @@
       "nombreSeccion": "Revisión de Conectividad",
       "itemsSeccion": [
         {
+          "id": 5001,
           "nombre": "Red Cableada Administrativos",
           "descripcion": "Oficinas Piso 1, Edificio Principal",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5002,
           "nombre": "Red Wi-Fi Alumnos",
           "descripcion": "Áreas comunes y Biblioteca",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5003,
           "nombre": "Red Cableada Alumnos",
           "descripcion": "Laboratorios de Computación, Edificio B",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5004,
           "nombre": "Puntos de Acceso Wi-Fi",
           "descripcion": "Planta Baja y Piso 1, Edificio C",
           "estado": "",
@@ -33,24 +37,28 @@
       "nombreSeccion": "Revisión de Servidores",
       "itemsSeccion": [
         {
+          "id": 5005,
           "nombre": "Servidor Principal de Aplicaciones",
           "descripcion": "Sala de Servidores, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5006,
           "nombre": "Servidor de Backup",
           "descripcion": "Sala de Servidores, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5007,
           "nombre": "Servidor de Correo Electrónico",
           "descripcion": "Planta Baja, Edificio Principal",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5008,
           "nombre": "Servidor de Archivos",
           "descripcion": "Edificio Principal, Piso 2",
           "estado": "",
@@ -62,30 +70,35 @@
       "nombreSeccion": "Revisión de Salas de Clases",
       "itemsSeccion": [
         {
+          "id": 5009,
           "nombre": "Proyector Aula 101",
           "descripcion": "Edificio Principal, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5010,
           "nombre": "Sistema de Audio Aula 101",
           "descripcion": "Edificio Principal, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5011,
           "nombre": "Proyector Aula 203",
           "descripcion": "Edificio Principal, Piso 2",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5012,
           "nombre": "Proyector Aula 304",
           "descripcion": "Edificio B, Piso 3",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5013,
           "nombre": "Sistema de Videoconferencia Aula 201",
           "descripcion": "Edificio Principal, Piso 2",
           "estado": "",
@@ -97,18 +110,21 @@
       "nombreSeccion": "Revisión de Equipos de Laboratorios",
       "itemsSeccion": [
         {
+          "id": 5014,
           "nombre": "Computadoras Laboratorio 1",
           "descripcion": "Edificio B, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5015,
           "nombre": "Computadoras Laboratorio 2",
           "descripcion": "Edificio B, Piso 1",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5016,
           "nombre": "Impresoras Laboratorio 1",
           "descripcion": "Edificio B, Planta Baja",
           "estado": "",
@@ -120,18 +136,21 @@
       "nombreSeccion": "Revisión de Salas de Reuniones",
       "itemsSeccion": [
         {
+          "id": 5017,
           "nombre": "Sistema de Proyección Sala de Reuniones 1",
           "descripcion": "Edificio Principal, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5018,
           "nombre": "Sistema de Videoconferencia Sala de Reuniones 2",
           "descripcion": "Edificio A, Piso 2",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5019,
           "nombre": "Equipo de Audio Sala de Reuniones 3",
           "descripcion": "Edificio A, Piso 1",
           "estado": "",
@@ -143,18 +162,21 @@
       "nombreSeccion": "Revisión de Seguridad",
       "itemsSeccion": [
         {
+          "id": 5020,
           "nombre": "CCTV Entrada Principal",
           "descripcion": "Edificio Principal, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5021,
           "nombre": "Cámaras de Vigilancia Pasillo A",
           "descripcion": "Edificio B, Piso 1",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5022,
           "nombre": "Cámaras de Vigilancia Pasillo B",
           "descripcion": "Edificio A, Piso 2",
           "estado": "",
@@ -166,18 +188,21 @@
       "nombreSeccion": "Revisión de Energía",
       "itemsSeccion": [
         {
+          "id": 5023,
           "nombre": "Generador Principal",
           "descripcion": "Sala de Energía, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5024,
           "nombre": "UPS Principal",
           "descripcion": "Sala de Servidores, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5025,
           "nombre": "UPS Secundario",
           "descripcion": "Edificio B, Piso 2",
           "estado": "",
@@ -189,18 +214,21 @@
       "nombreSeccion": "Revisión de Telefonía",
       "itemsSeccion": [
         {
+          "id": 5026,
           "nombre": "Central Telefónica",
           "descripcion": "Edificio Principal, Planta Baja",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5027,
           "nombre": "Teléfonos Administrativos",
           "descripcion": "Oficinas Administrativas, Piso 1, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5028,
           "nombre": "Teléfonos Alumnos",
           "descripcion": "Sala de Estudiantes, Piso 1, Edificio B",
           "estado": "",
@@ -212,12 +240,14 @@
       "nombreSeccion": "Revisión de Sistemas de Almacenamiento",
       "itemsSeccion": [
         {
+          "id": 5029,
           "nombre": "Servidor NAS Principal",
           "descripcion": "Sala de Servidores, Edificio A",
           "estado": "",
           "detalle": ""
         },
         {
+          "id": 5030,
           "nombre": "Servidor de Backup",
           "descripcion": "Edificio A, Piso 1",
           "estado": "",
